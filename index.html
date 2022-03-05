@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+    <title>Password Generator</title>
+
+</head>
+
+<body>
     <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+            <div class="card-body">
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
+            </div>
+
+            <form>
+                <!-- Create lables in a UL to select password criteria -->
+                <ul>
+                    <li>
+                        <label> <input type="checkbox" id="allowUpper"> - Allow Upper Case </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" id="allowLower"> - Allow Lower Case </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" id="allowSpecial"> - Allow Special </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" id="allowNumbers"> - Allow Numbers </label>
+                    </li>
+                </ul>
+
+                <label>Password Length
+                    <input type="range" name="passwordRange" min="8" max="128" value="12"
+                        oninput="this.form.passwordInput.value=this.value" />
+                    <input type="number" name="passwordInput" id="passwordInput" min="8" max="128" value="12"
+                        oninput="this.form.passwordRange.value=this.value" />
+                </label>
+            </form>
+
+            <div class="card-footer">
+                <button id="generate" class="btn">Generate Password</button>
+            </div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

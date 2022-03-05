@@ -1,50 +1,56 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Provided by instructor
-var allowUppercase;
-var allowLowerCase;
-var allowNumbers;
-var allowSpecials;
-var passwordCharacterCount;
+// Declare and initialize arrays
+var upperCaseChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-var uppercaseChars = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ];
+//evaluate the value of the checkboxes and concat them into a single array and exit if none are found
+function checkCriteria() {
+    var allowUpperCase = document.getElementById('allowUpper').checked
+    var allowLowerCase = document.getElementById('allowLower').checked
+    var allowNumbers = document.getElementById('allowNumbers').checked
+    var allowSpecials = document.getElementById('allowSpecial').checked
+    var passwordLength = document.getElementById('passwordInput').value
+    var charSet = [];
 
-
-// Provided by instructor
-function askAboutUppercase(){
-  allowUppercase = confirm("Are upper case characters allowed?");
-  console.log(allowUppercase);
+    if (allowUpperCase + allowLowerCase + allowNumbers + allowSpecials == 0) {
+        return;
+    }
+    if (allowUpperCase) {
+        charSet = charSet.concat(upperCaseChars);
+    }
+    if (allowLowerCase) {
+        charSet = charSet.concat(lowerCaseChars);
+    }
+    if (allowNumbers) {
+        charSet = charSet.concat(numbers);
+    }
+    if (allowSpecials) {
+        charSet = charSet.concat(specialChars);
+    }
+    var password = generatePassword(passwordLength, charSet);
+    writePassword(password)
 }
 
-// Repeat for other criteria; for the number of characters, use a prompt statement. Google it. NOTE: prompt statements think any value you provide is a string. You will need to convert it to a number.
-
-
-// Once all the criteria are determined, this function will generate the password. You can create other functions also if you need them.
-function generatePassword(){
-  var finalResult = ""
-
-  // HINT: Remember that a for-loop can iterate from a starting number to a ending number, such as the number of characters in a password.
-
-  // HINT: You may want to look into merging arrays together
-
-
-  return finalResult;
+// receive length and selected criteria array to randomize the contents
+function generatePassword(length, charSet) {
+    var finalResult = "";
+    for (var i = 0; i < length; i++) {
+        var index = Math.floor((Math.random() * charSet.length));
+        finalResult += charSet[index];
+    }
+    return finalResult
 }
 
-// Write password to the #password input
-function writePassword() {
+//  Receive password from checkCriteria() ad write password to the #password input
+function writePassword(pass) {
 
-  // ask the questions first
-  askAboutUppercase();
-
-
-
-
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+    var passwordText = document.querySelector("#password");
+    passwordText.value = pass;
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", checkCriteria);
