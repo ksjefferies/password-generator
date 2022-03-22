@@ -38,7 +38,7 @@ In this project, i did the following:
 - [GetElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 
 I worked with the following people:
-- Daniel Norred
+- [Daniel Norred](https://github.com/MinisculeGirraffe)
 
 ## License
 This code is licensed under the MIT License
