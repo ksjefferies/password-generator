@@ -40,5 +40,12 @@ In this project, i did the following:
 I worked with the following people:
 - [Daniel Norred](https://github.com/MinisculeGirraffe)
 
+## Technologies Used:
+
+- Javascript
+- jQuery
+- HTML
+- CSS
+
 ## License
 This code is licensed under the MIT License
