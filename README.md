@@ -1,51 +1,39 @@
-# 03 JavaScript: Password Generator
-
-## Objectives
-
-In this project, i did the following:
-
-- Allow user to select criteria they want to be used to form password (zero selection will not proceed)
-    - Upper Case
-    - Lower Case
-    - Special Characters
-    - Numbers
-    - Password Length (min: 8 max: 128)
-- Check boxes are cleared each time
-- Responsive layout 
-- Proper naming / indention conventions used
-- Proper comments added to script.js
+# Password Generator
 
 -----
+## Description:
 
-## Final screenshots of initial and results page
+User is able to select password criteria (upper/lower case, special characters, numbers, and length) and the site will create a password using the requested criteria.
+
+-----
+## Images:
 
 ![Screenshot of initial Password Generator webpage](./assets/images/password-generator-initial.png)
 
 ![Screenshot of final Password Generator webpage](./assets/images/password-generator-results.png)
 
+
 -----
-## Links for Github Repository and final public page
+## Site URL:
+
+- [Password Generator](https://ksjefferies.github.io/password-generator/)
+
+-----
+## Github Repository:
 
 - [Github Repository for Password Generator](https://github.com/ksjefferies/password-generator)
 
-- [Password Generator final page](https://ksjefferies.github.io/password-generator/)
+## Author:
 
-## Contributions and sources:
-
-- [Checkboxes and Labels](https://www.w3schools.com/howto/howto_css_custom_checkbox.asp)
-- [Checkbox Alignmet](https://stackoverflow.com/questions/22321795/how-to-align-the-checkbox-and-label-in-same-line-in-html)
-- [Alignment of list elements](https://stackoverflow.com/questions/3400548/how-to-vertically-align-li-elements-in-ul)
-- [GetElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
-
-I worked with the following people:
-- [Daniel Norred](https://github.com/MinisculeGirraffe)
+- [Kelly Jefferies](https://github.com/ksjefferies)
 
 ## Technologies Used:
 
-- Javascript
-- jQuery
-- HTML
-- CSS
+![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![jQuery](https://img.shields.io/badge/-jQuery-green)  
+![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-## License
-This code is licensed under the MIT License
+## License:
+
+[![License](https://img.shields.io/badge/License-MIT%20License-Green)](http://choosealicense.com/licenses/mit/)
