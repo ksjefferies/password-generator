@@ -12,13 +12,11 @@ User is able to select password criteria (upper/lower case, special characters, 
 
 ![Screenshot of final Password Generator webpage](./assets/images/password-generator-results.png)
 
-
 -----
 ## Site URL:
 
 - [Password Generator](https://ksjefferies.github.io/password-generator/)
 
------
 ## Github Repository:
 
 - [Github Repository for Password Generator](https://github.com/ksjefferies/password-generator)
